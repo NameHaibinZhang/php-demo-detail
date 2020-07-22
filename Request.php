@@ -27,7 +27,7 @@ class Request
             $item_service = "itemcenter";
         }
         echo "Itemcenter service:$item_service";
-        $url = sprintf("http://%s:8080/item/%u", $item_service, $item_id);
+        $url = sprintf("http://%s:8080/index.php", $item_service);
         $res = _httpGet($url);
         return array("describe"=>"Get from itemcenter", "result"=>$res);
     }
